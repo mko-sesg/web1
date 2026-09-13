@@ -21,4 +21,4 @@ function bindButton(buttonId, handler) {
 }
 
 bindButton('video1Play', video1Play);
-bindButton('video1pause', video1pause);
+bindButton('video1Pause', video1pause);
