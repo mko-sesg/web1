@@ -12,5 +12,13 @@ function video1pause() {
   }
 }
 
+
+function bindButton(buttonId, handler) {
+  var button = document.getElementById(buttonId);
+  if (button) {
+    button.addEventListener('click', handler);
+  }
+}
+
 bindButton('video1Play', video1Play);
 bindButton('video1pause', video1pause);
