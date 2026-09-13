@@ -77,10 +77,18 @@ body.page-body {
 }
 
 .site-nav {
+  gap: 12px;
+  padding: 16px;
+}
+
+.site-nav-links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  padding: 16px;
+}
+
+.nav-toggle {
+  display: none;
 }
 
 .site-main {
@@ -120,9 +128,23 @@ body.page-body {
 
 @media (max-width: 860px) {
   .site-header,
-  .content-grid,
-  .site-nav {
+  .content-grid {
     grid-template-columns: 1fr;
+  }
+
+  .nav-toggle {
+    display: block;
+    width: 100%;
+  }
+
+  .site-nav-links {
+    display: none;
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+  }
+
+  .site-nav.is-open .site-nav-links {
+    display: grid;
   }
 
   .header-menu {

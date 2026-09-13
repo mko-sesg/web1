@@ -34,3 +34,13 @@ bindButton('navHome', goHome);
 bindButton('navAbout', goAbout);
 bindButton('navGallery', goGallery);
 bindButton('navContact', goContact);
+
+var navToggle = document.getElementById('navToggle');
+var siteNav = document.querySelector('.site-nav');
+
+if (navToggle && siteNav) {
+  navToggle.addEventListener('click', function () {
+    var isOpen = siteNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
